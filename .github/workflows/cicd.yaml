@@ -11,23 +11,22 @@ jobs:
     contents: read
     packages: write
 
-  job1:
-    name: Checkout code
-    uses: actions/checkout@v6 
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v6 
 
-  job2:
-    name: Security with GHCR
-    uses: docker/login-action@v3
-    with:
-      registrly: ghcr.io
-      username: ${{github.actor}} #my username?
-      password: ${{secrets.GITHUB_TOKEN}} #no explicitly written password so security
+  
+    - name: Security with GHCR
+      uses: docker/login-action@v3
+      with:
+        registrly: ghcr.io
+        username: ${{github.actor}} #my username?
+        password: ${{secrets.GITHUB_TOKEN}} #no explicitly written password so security
 
-  job3: 
-    name: push image to GHCR
-    uses: docker/build-push-action@v5
-    with:
-      context: .
-      push: true
-      tags: ghcr.io/<your-github-username>/echo-api:latest
+    - name: push image to GHCR
+      uses: docker/build-push-action@v5
+      with:
+        context: .
+        push: true
+        tags: ghcr.io/<your-github-username>/echo-api:latest
   
