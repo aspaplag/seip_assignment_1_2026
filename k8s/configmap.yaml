@@ -4,3 +4,6 @@ kind: ConfigMap
 data: 
   WELCOME_MESSAGE: f{"Welcome to the SEIP lab assignment.\n This student is having a breakdown over it hehe"}
   NODE_ENV: "production"
+
+metadata:
+  name: echo-api-config
