@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 
 data: 
-  WELCOME_MESSAGE: f{"Welcome to the SEIP lab assignment.\n This student is having a breakdown over it hehe"}
+  WELCOME_MESSAGE: "Welcome to the SEIP lab assignment. This student is having a breakdown over it hehe"
   NODE_ENV: "production"
 
 metadata:
