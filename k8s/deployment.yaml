@@ -22,7 +22,7 @@ spec:
       containers:
         - name: echo-api
           image: ghcr.io/aspaplag/echo-api:latest #from cicd yaml
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 3000
 

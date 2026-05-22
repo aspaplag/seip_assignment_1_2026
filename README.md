@@ -15,16 +15,8 @@ Starts the local kubernetes cluster so the app can run in it.
     minikube start
     ```
 
-## 3. Making the images available to the cluster
 
-Builds the docker image from the Dockerfile and loads it into Minikube.
-
-    ```
-    docker build -t ghcr.io/aspaplag/echo-api:latest .  
-    minikube image load ghcr.io/aspaplag/echo-api:latest
-    ```
-
-## 4. Applying all the manifest files
+## 3. Applying all the manifest files
 
 Creates the configmap, secret, deployment and service in the cluster.
 
@@ -32,7 +24,7 @@ Creates the configmap, secret, deployment and service in the cluster.
     kubectl apply -f k8s/
     ```
 
-## 5. Checking cluster and pods state
+## 4. Checking cluster and pods state
 
 Confirms that the pods are running.
 
@@ -41,7 +33,7 @@ Confirms that the pods are running.
     kubectl get configmap,secret
     ```
 
-## 6. Accessing the cluster
+## 5. Accessing the cluster
 
 Forwards the internal ClusterIP service to your local machine so you can reach the app.
 
