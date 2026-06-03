@@ -1,4 +1,7 @@
 # Assignment Build Guide
+Aspasia Plangesi
+
+Note: the pdf report described in the assignment requirements is uploaded in this repo. In it are the future outlook and ai usage sections.
 
 ## 1. Cloning the repo:
 
